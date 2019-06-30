@@ -1,0 +1,9 @@
+
+# Please run the following commands:
+
+script tagger-log.txt
+time python tagger.py pos-train.txt pos-test.txt > pos-test-with-tags.txt
+head -100 pos-test-with-tags.txt
+python scorer.py pos-test-with-tags.txt pos-test-key.txt > pos-taggingreport.txt
+cat pos-tagging-report.txt
+exit
